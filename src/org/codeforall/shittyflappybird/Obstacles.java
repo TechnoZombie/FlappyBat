@@ -14,6 +14,7 @@ import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 
+
 import java.util.LinkedList;
 
 public class Obstacles extends Rectangle {
@@ -26,9 +27,11 @@ public class Obstacles extends Rectangle {
         obs1 = new Rectangle(400, 10, 50, generator());
         obs2 = new Rectangle(400, 400, 50, generator());
 
+
         obs1.setColor(Color.GREEN);
         obs2.setColor(Color.GREEN);
         obs1.fill();
+
         obs2.fill();
 
     }
@@ -64,5 +67,7 @@ public class Obstacles extends Rectangle {
         trash.add(ob2);
         trash.remove(ob1);
         trash.remove(ob2);
+
+
     }
 }

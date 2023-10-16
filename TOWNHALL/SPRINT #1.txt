@@ -1,0 +1,45 @@
+SPRINT #1:
+TODO:
+
+CLASSES:
+-> Character;
+	Proprieties:
+	-- Gravity effect	
+	-- Score;
+	-- Lives; (v2)
+
+-> Keyboard;
+	Requirements:
+	- start key;
+	- play key;
+	- reset key
+
+-> Obstacles;
+	Requirements:
+	-- method to generate pipes;
+	-- randomize size of pipes; (v2)
+	-- enough gap for the bird to pass;
+	-- not too wide that the bird will always crash;
+
+-> GameScreen / Backdrop wtv;
+	Requirements:
+	--Move background;
+	--show current score;
+	--show current lives; (v2)
+
+-> Mechanics; //engine
+	Proprieties:
+	-- Keyboard;
+
+	Requirements:
+	-- Gravity; [y will always --; keyboard will y++]
+
+-> Main g.start();
+
+RESEARCH TOPICS:
+- Character + Keyboard; LUANA
+- Mechanics; SÉRGIO
+- GameScreen; TELMO
+- Obstacles; ANTONIO
+
+SPRINT REVIEW: 16 OCT 2023 @ 18h00

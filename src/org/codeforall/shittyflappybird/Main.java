@@ -10,6 +10,7 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Main {
     public static void main(String[] args) {
+
         Rectangle grid = new Rectangle(10, 10, 500,700);
         grid.setColor(Color.PINK);
         grid.draw();
@@ -18,6 +19,7 @@ public class Main {
         new Obstacles().tryMove();
        // EventHandler eventHandler = new EventHandler();
         //eventHandler.init();
+
 
 
 
