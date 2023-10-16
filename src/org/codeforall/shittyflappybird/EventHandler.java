@@ -10,9 +10,11 @@ public class EventHandler implements KeyboardHandler {
     Obstacles pipes;
     Character bird = new Character();
 
-    EventHandler(){
+
+   /* EventHandler(){
          pipes = new Obstacles();
     }
+*/
 
     public void init() {
         Keyboard kb = new Keyboard(this);
@@ -39,14 +41,15 @@ public class EventHandler implements KeyboardHandler {
     public void keyPressed(KeyboardEvent keyboardEvent) {
         switch(keyboardEvent.getKey()){
             case KeyboardEvent.KEY_SPACE:
-                pipes.obs1.translate(-20, 0);
-                pipes.obs2.translate(-20,0);
                 break;
             case KeyboardEvent.KEY_W:
                 bird.bird.translate(0, -50);
                 break;
             case KeyboardEvent.KEY_S:
                 bird.bird.translate(0, 50);
+                break;
+
+
         }
 
     }
