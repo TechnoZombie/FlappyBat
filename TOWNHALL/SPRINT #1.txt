@@ -20,6 +20,8 @@ CLASSES:
 	-- randomize size of pipes; (v2)
 	-- enough gap for the bird to pass;
 	-- not too wide that the bird will always crash;
+	Antonio // verificação de maneira de colocar dois métodos diferentes a correr ao mesmo tempo
+	ou então fazer o método moveAll().//
 
 -> GameScreen / Backdrop wtv;
 	Requirements:

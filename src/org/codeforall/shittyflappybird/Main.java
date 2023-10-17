@@ -14,11 +14,12 @@ public class Main {
         Rectangle grid = new Rectangle(10, 10, 500,700);
         grid.setColor(Color.PINK);
         grid.draw();
+        new Character();
       //  Picture arena = new Picture(0, 0, "Resources/waterfall.jpg");
         //arena.draw();
         new Obstacles().tryMove();
-       // EventHandler eventHandler = new EventHandler();
-        //eventHandler.init();
+        EventHandler eventHandler = new EventHandler();
+        eventHandler.init();
 
 
 
