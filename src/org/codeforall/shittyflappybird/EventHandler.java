@@ -5,7 +5,7 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 
-public class EventHandler implements KeyboardHandler {
+public class EventHandler implements KeyboardHandler, Runnable {
 
     Obstacles pipes;
     Character bird = new Character();
@@ -16,7 +16,7 @@ public class EventHandler implements KeyboardHandler {
     }
 */
 
-    public void init() {
+    public synchronized void init() {
         Keyboard kb = new Keyboard(this);
 
         KeyboardEvent start = new KeyboardEvent();
@@ -38,15 +38,15 @@ public class EventHandler implements KeyboardHandler {
 
 
     @Override
-    public void keyPressed(KeyboardEvent keyboardEvent) {
+    public synchronized void keyPressed(KeyboardEvent keyboardEvent) {
         switch(keyboardEvent.getKey()){
             case KeyboardEvent.KEY_SPACE:
                 break;
             case KeyboardEvent.KEY_W:
-                bird.bird.translate(0, -50);
+                bird.bird.translate(0, -20);
                 break;
             case KeyboardEvent.KEY_S:
-                bird.bird.translate(0, 50);
+                bird.bird.translate(0, 20);
                 break;
 
 
@@ -56,6 +56,12 @@ public class EventHandler implements KeyboardHandler {
 
     @Override
     public void keyReleased(KeyboardEvent keyboardEvent) {
+
+    }
+
+    @Override
+    public void run() {
+       init();
 
     }
 }
