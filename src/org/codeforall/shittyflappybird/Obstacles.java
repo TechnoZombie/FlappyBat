@@ -53,7 +53,7 @@ public class Obstacles extends Rectangle {
         return 370 + minus;
     }
 
-    public void tryMove() {
+    public  void tryMove() {
         try {
             move();
         } catch (InterruptedException e) {
@@ -89,4 +89,6 @@ public class Obstacles extends Rectangle {
         } else
             obs.translate(-1, -5);
     }
+
+
 }

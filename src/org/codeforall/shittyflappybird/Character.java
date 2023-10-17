@@ -18,8 +18,10 @@ public class Character {
     public Rectangle bird;
 
     public Character() {
-        bird = new Rectangle(100, 100, 50, 50);
+        bird = new Rectangle(100, 100, 30, 30);
         bird.setColor(Color.ORANGE);
         bird.fill();
     }
+
+
 }
