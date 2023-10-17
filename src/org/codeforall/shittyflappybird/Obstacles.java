@@ -32,6 +32,8 @@ public class Obstacles extends Rectangle {
        // obs2.setColor(Color.RED);
         //obs1.fill();
         //obs2.fill();
+        olalal
+                
 
     }
 
