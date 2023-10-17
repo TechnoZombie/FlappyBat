@@ -7,14 +7,8 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 
 public class EventHandler implements KeyboardHandler, Runnable {
 
-    Obstacles pipes;
     Character bird = new Character();
 
-
-   /* EventHandler(){
-         pipes = new Obstacles();
-    }
-*/
 
     public synchronized void init() {
         Keyboard kb = new Keyboard(this);
