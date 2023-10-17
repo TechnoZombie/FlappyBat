@@ -4,6 +4,7 @@ import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
+import org.academiadecodigo.simplegraphics.mouse.MouseEvent;
 
 public class EventHandler implements KeyboardHandler, Runnable {
 
@@ -27,6 +28,7 @@ public class EventHandler implements KeyboardHandler, Runnable {
         down.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
         down.setKey(KeyboardEvent.KEY_S);
         kb.addEventListener(down);
+
     }
 
 
@@ -42,8 +44,6 @@ public class EventHandler implements KeyboardHandler, Runnable {
             case KeyboardEvent.KEY_S:
                 bird.bird.translate(0, 20);
                 break;
-
-
         }
 
     }

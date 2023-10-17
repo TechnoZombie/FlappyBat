@@ -26,18 +26,16 @@ public class Obstacles extends Rectangle {
 
     public Obstacles() {
         new Enemies();
-       // obs1 = new Rectangle(300, 100, 100, 100);
-        //obs2 = new Rectangle(300, 400, 100, 100);
-       // obs1.setColor(Color.GREEN);
-       // obs2.setColor(Color.RED);
-        //obs1.fill();
-        //obs2.fill();
-        olalal
-                
+        obs1 = new Rectangle(300, 100, 100, 100);
+        obs2 = new Rectangle(300, 400, 100, 100);
+        obs1.setColor(Color.GREEN);
+        obs2.setColor(Color.RED);
+        obs1.fill();
+        obs2.fill();
 
     }
 
-    public  void tryMove() {
+    public void tryMove() {
         try {
             move();
         } catch (InterruptedException e) {
@@ -54,8 +52,8 @@ public class Obstacles extends Rectangle {
             obs2.fill();
             Enemies.keepUp();
         }
-        Enemies.bat=null;
-        Enemies.ghost=null;
+        Enemies.bat = null;
+        Enemies.ghost = null;
         obs1.delete();
         obs2.delete();
         trashCompacter(obs1, obs2);
@@ -69,10 +67,10 @@ public class Obstacles extends Rectangle {
         trash.remove(ob2);
     }
 
-    private void randomMovement(Rectangle obs){
+    private void randomMovement(Rectangle obs) {
         double i = Math.random();
         if (i > 0.50) {
-            obs.translate(-1,5);
+            obs.translate(-1, 5);
         } else
             obs.translate(-1, -5);
     }
