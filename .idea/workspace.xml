@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f1abca0-5e31-4c15-84ff-7750bae7560b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/simple_graphics_0_2_1_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShittyFlappyBird.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ShittyFlappyBird.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Obstacles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Obstacles.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +35,33 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/codecadet/Documents/ShittyFlappyBird",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.codeforall.shittyflappybird.Main" />
+      <module name="ShittyFlappyBird" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.codeforall.shittyflappybird.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697532176259</updated>
       <workItem from="1697532177917" duration="7148000" />
+      <workItem from="1697546775405" duration="138000" />
     </task>
     <servers />
   </component>
