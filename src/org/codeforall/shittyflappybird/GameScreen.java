@@ -12,6 +12,8 @@ import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
+import javax.sound.sampled.LineEvent;
+import javax.sound.sampled.LineListener;
 
 public class GameScreen {
 
@@ -65,5 +67,6 @@ public class GameScreen {
     public void resetScore() {
         score = 0;
     }
+
 
 }

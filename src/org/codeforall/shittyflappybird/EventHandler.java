@@ -53,10 +53,10 @@ public class EventHandler implements KeyboardHandler, Runnable {
                 break;
             case KeyboardEvent.KEY_W:
                 setBeingPulled(false);
-                System.out.println("PRESS - GRAVITY ON? " + isBeingPulled);
-                bird.bird.translate(0, -40);
+                //System.out.println("PRESS - GRAVITY ON? " + isBeingPulled);
+                bird.bird.translate(0, -120);
                 setBeingPulled(true);
-                System.out.println("RELEASE - GRAVITY ON? " + isBeingPulled);
+                //System.out.println("RELEASE - GRAVITY ON? " + isBeingPulled);
                 break;
             case KeyboardEvent.KEY_S:
                 bird.bird.translate(0, 30);

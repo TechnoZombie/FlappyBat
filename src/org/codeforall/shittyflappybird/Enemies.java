@@ -105,9 +105,24 @@ public class Enemies extends Picture implements Runnable  {
     public void checkInterseption(Picture bat, Picture ghost) {
         if(batHitBox(bat).intersects(Character.birdHitBox()) || ghostHitBox(ghost).intersects(Character.birdHitBox())){
             System.out.println("works man");
-            System.exit(1);
+            stopAll();
+            Character.bird.delete();
+            try {
+                Character.deathAnimation();
+                Thread.sleep(100);
+                System.exit(1);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
 
+    }
+
+    private void stopAll(){
+        bat.delete();
+        bat1.delete();
+        ghost.delete();
+        ghost1.delete();
     }
 
     public Rectangle batHitBox(Picture bat) {
