@@ -12,9 +12,9 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Rectangle grid = new Rectangle(10, 10, 640, 1136);
-        grid.setColor(Color.PINK);
-        grid.draw();
+       // Rectangle grid = new Rectangle(10, 10, 640, 1136);
+       // grid.setColor(Color.PINK);
+       // grid.draw();
 
         Rectangle rec = new Rectangle();
         rec.fill();
@@ -24,6 +24,12 @@ public class Main {
 
         Picture arena = new Picture(10, 10, "resources2/HW-BD.jpeg");
         arena.draw();
+
+        //Picture arena = new Picture(10, 10, "resources2/background.jpeg");
+        //arena.draw();
+         GameScreen gameScreen = new GameScreen();
+            gameScreen.backgroundImage();
+            gameScreen.gridmaker();
 
         EventHandler eventHandler = new EventHandler();
         Thread t = new Thread(eventHandler);
