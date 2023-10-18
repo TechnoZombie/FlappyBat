@@ -4,6 +4,14 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import java.io.File;
+import java.io.IOException;
+
 
 import static java.lang.Thread.sleep;
 
@@ -30,6 +38,22 @@ public class EventHandler implements KeyboardHandler, Runnable {
         isBeingPulled = beingPulled;
     }
 
+    // declaring background music variable
+    private Clip backgroundMusic;
+
+
+    // method to add background music
+    public void loadAudio() {
+        try {
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("Resources/freak.wav"));
+            backgroundMusic = AudioSystem.getClip();
+            backgroundMusic.open(audioInputStream);
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     @Override
     public void keyPressed(KeyboardEvent keyboardEvent) {
         switch (keyboardEvent.getKey()) {
@@ -48,7 +72,11 @@ public class EventHandler implements KeyboardHandler, Runnable {
 
     @Override
     public void run() {
+        loadAudio();
         init();
+        // Play the background music
+        backgroundMusic.start();
+
         // gravidade
         while (isBeingPulled) {
             bird.bird.translate(0, 10); // increase v1 para ter mais gravidade
@@ -59,5 +87,10 @@ public class EventHandler implements KeyboardHandler, Runnable {
                 e.printStackTrace();
             }
         }
+
+        // Stop and close the background music when the game ends
+        backgroundMusic.stop();
+        backgroundMusic.close();
     }
+
 }
