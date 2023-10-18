@@ -29,7 +29,11 @@ public class Main {
         EventHandler eventHandler = new EventHandler();
         Thread t = new Thread(eventHandler);
         t.start();
-        new Obstacles().tryMove();
+        Enemies enemy = new Enemies();
+        Thread tt = new Thread(enemy);
+        tt.start();
+        enemy.spawnEnemiesRound1();
+
 
     }
 }

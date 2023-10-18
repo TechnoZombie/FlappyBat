@@ -40,11 +40,9 @@ public class EventHandler implements KeyboardHandler, Runnable {
                 break;
             case KeyboardEvent.KEY_W:
                 bird.bird.translate(0, -20);
-                bird.tryHitBox();
                 break;
             case KeyboardEvent.KEY_S:
                 bird.bird.translate(0, 20);
-                bird.tryHitBox();
                 break;
         }
 

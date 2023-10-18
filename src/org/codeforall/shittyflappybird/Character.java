@@ -13,12 +13,13 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+
+import java.awt.*;
 //import java.awt.*;
 
 public class Character extends Picture {
-    public  Picture bird;
-    public Rectangle rectangle;
+    public static Picture bird;
+    public static java.awt.Rectangle rectangle;
 
 
     public Character() {
@@ -28,19 +29,9 @@ public class Character extends Picture {
 
     }
 
-    public void tryHitBox(){
-        try {
-            birdHitBox();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public  void birdHitBox() throws InterruptedException {
-        rectangle = new Rectangle(bird.getX(), bird.getY(), bird.getWidth(), bird.getHeight());
-        rectangle.draw();
-        Thread.sleep(100);
-        rectangle.delete();
+    public static Rectangle birdHitBox()  {
+        rectangle = new java.awt.Rectangle(bird.getX(), bird.getY(), bird.getWidth()-70, bird.getHeight()-70);
+        return rectangle;
     }
 
 
