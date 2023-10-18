@@ -23,8 +23,8 @@ public class Enemies extends Picture implements Runnable  {
     }
 
     public void spawnEnemiesRound1(){
-        bat = new Picture(600, 100, "Resources/morcego.gif");
-        ghost = new Picture(650, 400, "Resources/ghost.gif");
+        bat = new Picture(1920, 100, "Resources/morcego.gif");
+        ghost = new Picture(1920, 400, "Resources/ghost.gif");
         bat.grow(10, 10);
         ghost.grow(30, 30);
         bat.draw();

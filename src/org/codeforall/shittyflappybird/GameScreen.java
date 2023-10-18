@@ -13,29 +13,35 @@ import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class GameScreen {
-
-    // chamar o bird
     private Character bird;
+    private Picture arena;
+
 
     private int score;
     private int highScore;
 
+    public void backgroundImage() {
+        arena = new Picture(10, 10, "resources2/HW-BD.jpeg");
+        arena.draw();
+
+    }
 
     public void gridmaker() {
-        Rectangle grid = new Rectangle(10, 10, 2000, 1200);
+        // picture ainda não existe, adicionar mais tarde
+
+        int sizeX = arena.getHeight(); //grid size fica dinamico com o tamanho da background image puxada no método backgroundImage()
+        int sizeY = arena.getWidth();
+        Rectangle grid = new Rectangle(10, 10, sizeY, sizeX);
         grid.setColor(Color.CYAN);
         grid.draw();
 
-        // picture ainda não existe, adicionar mais tarde
-        Picture arena = new Picture(10, 10, "Resources/2background-city.jpeg");
-        arena.draw();
+
     }
 
     public GameScreen() {
 
         score = 0;
         highScore = 0;
-
         bird = new Character();
 
 
