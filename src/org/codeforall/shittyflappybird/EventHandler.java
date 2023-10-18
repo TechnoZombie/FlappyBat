@@ -1,15 +1,15 @@
 package org.codeforall.shittyflappybird;
 
-import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
+import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 
 import static java.lang.Thread.sleep;
 
 public class EventHandler implements KeyboardHandler, Runnable {
     boolean isBeingPulled = true;
-    Character bird = new Character();
+    private Character bird = new Character();
 
 
     public synchronized void init() {
@@ -42,7 +42,7 @@ public class EventHandler implements KeyboardHandler, Runnable {
     }
 
     @Override
-    public synchronized void keyPressed(KeyboardEvent keyboardEvent) {
+    public void keyPressed(KeyboardEvent keyboardEvent) {
         switch (keyboardEvent.getKey()) {
             case KeyboardEvent.KEY_SPACE:
 /*             setBeingPulled(false);
@@ -67,7 +67,7 @@ public class EventHandler implements KeyboardHandler, Runnable {
     }
 
     @Override
-    public synchronized void keyReleased(KeyboardEvent keyboardEvent) {
+    public void keyReleased(KeyboardEvent keyboardEvent) {
     /*        int keyCode = keyboardEvent.getKey();
             if (keyCode == KeyboardEvent.KEY_W) {
                 setBeingPulled(true);

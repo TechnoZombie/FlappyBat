@@ -8,8 +8,8 @@
 
 package org.codeforall.shittyflappybird;
 
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Color;
+import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 
@@ -19,7 +19,6 @@ public class GameScreen {
     private Character bird;
 
     // chamar os obstacles
-    private Obstacles obstacles;
 
     private int score;
 
@@ -42,7 +41,7 @@ public class GameScreen {
         highScore = 0;
 
         bird = new Character();
-        obstacles = new Obstacles();
+
 
     }
 

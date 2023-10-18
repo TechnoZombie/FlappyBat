@@ -8,22 +8,33 @@
 package org.codeforall.shittyflappybird;
 
 import org.academiadecodigo.simplegraphics.graphics.Color;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-public class Character {
-    public Rectangle bird;
+import java.awt.*;
+//import java.awt.*;
+
+public class Character extends Picture {
+    public static Picture bird;
+    public static java.awt.Rectangle rectangle;
 
 
     public Character() {
-        bird = new Rectangle(100, 100, 30, 30);
-        bird.setColor(Color.ORANGE);
-        bird.fill();
+        bird = new Picture(100, 100, "Resources/placeholder.png");
+        bird.grow(20, 20);
+        bird.draw();
 
     }
+
+    public static Rectangle birdHitBox()  {
+        rectangle = new java.awt.Rectangle(bird.getX(), bird.getY(), bird.getWidth()-70, bird.getHeight()-70);
+        return rectangle;
+    }
+
+
 
 
 }
