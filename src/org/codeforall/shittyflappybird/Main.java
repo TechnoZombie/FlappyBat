@@ -20,7 +20,9 @@ public class Main {
         rec.fill();
 
         //new Character().run();
-        Picture arena = new Picture(10, 10, "Resources/waterfall.jpg");
+        //Picture arena = new Picture(10, 10, "Resources/waterfall.jpg");
+
+        Picture arena = new Picture(10, 10, "resources2/HW-BD.jpeg");
         arena.draw();
 
         EventHandler eventHandler = new EventHandler();

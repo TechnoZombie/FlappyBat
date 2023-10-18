@@ -12,18 +12,12 @@ import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-import javax.sound.sampled.LineEvent;
-import javax.sound.sampled.LineListener;
-
 public class GameScreen {
 
     // chamar o bird
     private Character bird;
 
-    // chamar os obstacles
-
     private int score;
-
     private int highScore;
 
 

@@ -22,12 +22,10 @@ public class Character extends Picture {
     public static java.awt.Rectangle rectangle;
     private static final int dc = 150;
 
-
     public Character() {
         bird = new Picture(100, 100, "Resources/placeholder.png");
         bird.grow(20, 20);
         bird.draw();
-
     }
 
     public static Rectangle birdHitBox()  {

@@ -12,10 +12,6 @@ public class Enemies extends Picture implements Runnable  {
     public static Picture ghost1;
     private java.awt.Rectangle rectangle;
 
-    public Enemies() {
-
-    }
-
     public void spawnEnemiesRound2(){
         bat1 = new Picture(600, 100, "Resources/morcego.gif");
         ghost1 =new Picture(650, 400, "Resources/ghost.gif");
@@ -23,7 +19,6 @@ public class Enemies extends Picture implements Runnable  {
         ghost1.grow(30,30);
         bat1.draw();
         ghost1.draw();
-        System.out.println("wtf");
         move2();
     }
 
