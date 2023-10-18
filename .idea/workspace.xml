@@ -7,8 +7,14 @@
     <list default="true" id="4f1abca0-5e31-4c15-84ff-7750bae7560b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Enemies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Enemies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/Obstacles.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/EventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/codeforall/shittyflappybird/GameScreen.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +59,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/Resources" />
+      <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
   <component name="RunManager">
@@ -89,6 +95,10 @@
       <workItem from="1697546775405" duration="138000" />
       <workItem from="1697546997597" duration="695000" />
       <workItem from="1697560209173" duration="2197000" />
+      <workItem from="1697564842454" duration="2492000" />
+      <workItem from="1697612157511" duration="2695000" />
+      <workItem from="1697616812802" duration="3080000" />
+      <workItem from="1697633707122" duration="4152000" />
     </task>
     <servers />
   </component>
