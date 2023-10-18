@@ -53,9 +53,20 @@ public class EventHandler implements KeyboardHandler, Runnable {
 
     }
 
+
+
     @Override
     public void run() {
-       init();
+        init();
+        // gravidade
+        while (true) {
+            bird.bird.translate(0, 20); // increase v1 para ter mais gravidade
 
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
