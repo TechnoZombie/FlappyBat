@@ -20,7 +20,7 @@ public class Bat extends Picture {
 
 
     public Bat() {
-        batPic = new Picture(100, 100, "Resources/animations/BatAnimation/BatAnimation/image (1).png");
+        batPic = new Picture(100, 100, "Resources/animations/BatAnimation/image (1).png");
 
         batPic.draw();
     }
@@ -31,7 +31,7 @@ public class Bat extends Picture {
         int lastY = batPic.getY();
         System.out.println(lastY);
         batPic.delete();
-        Bat.batPic = new Picture(lastY,lastX,"Resources/animations/BatAnimation/BatAnimation/DeadBat.png");
+        Bat.batPic = new Picture(lastY,lastX,"Resources/animations/BatAnimation/DeadBat.png");
         batPic.draw();
     }
 
