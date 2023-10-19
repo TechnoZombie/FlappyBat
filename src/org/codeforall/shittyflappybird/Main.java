@@ -5,31 +5,29 @@
 package org.codeforall.shittyflappybird;
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
+import org.codeforall.shittyflappybird.GameObjects.Enemies;
+import org.codeforall.shittyflappybird.Handlers.EventHandler;
 
 public class Main {
     public static void main(String[] args) {
-
-        Rectangle rec = new Rectangle();
-        rec.fill();
+        Engine engine = new Engine();
+        //Rectangle rec = new Rectangle();
+        //GameScreen gameScreen = new GameScreen();
+       // rec.fill();
 
         //O background é chamado na funçao abaixo gamescreen.backgroundImage.jpeg
         //a grid assim pode ficar dinamica ao background size
 
-       // Picture arena = new Picture(10, 10, "resources2/HW-BD.jpeg");
+        //Picture arena = new Picture(10, 10, "resources2/HW-BD.jpeg");
         //arena.draw();
 
-         GameScreen gameScreen = new GameScreen();
-            gameScreen.backgroundImage();
-            gameScreen.gridmaker();
 
-        EventHandler eventHandler = new EventHandler();
-        Thread t = new Thread(eventHandler);
-        t.start();
+            //gameScreen.backgroundImage();
+            //gameScreen.gridmaker();
 
-        Enemies enemy = new Enemies();
-        Thread tt = new Thread(enemy);
-        tt.start();
-        enemy.spawnEnemiesRound1();
+
+      engine.start();
 
 
     }

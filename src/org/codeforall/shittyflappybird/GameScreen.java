@@ -11,9 +11,9 @@ package org.codeforall.shittyflappybird;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
+import org.codeforall.shittyflappybird.GameObjects.Bat;
 
 public class GameScreen {
-    private Character bird;
     private Picture arena;
 
 
@@ -23,7 +23,6 @@ public class GameScreen {
     public void backgroundImage() {
         arena = new Picture(10, 10, "resources2/HW-BD.jpeg");
         arena.draw();
-
     }
 
     public void gridmaker() {
@@ -34,15 +33,17 @@ public class GameScreen {
         Rectangle grid = new Rectangle(10, 10, sizeY, sizeX);
         grid.setColor(Color.CYAN);
         grid.draw();
+    }
 
-
+    public void removeBackGround(){
+        arena.delete();
     }
 
     public GameScreen() {
 
         score = 0;
         highScore = 0;
-        bird = new Character();
+       // bird = new Bat();
 
 
     }
