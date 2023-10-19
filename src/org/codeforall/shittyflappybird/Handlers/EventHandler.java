@@ -26,7 +26,17 @@ public class EventHandler implements KeyboardHandler, Runnable {
     // method to add background music
     public void loadAudio() {
         try {
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("Resources/freak.wav"));
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("Resources/Sound/EvilLaugh.wav"));
+            backgroundMusic = AudioSystem.getClip();
+            backgroundMusic.open(audioInputStream);
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadEndAudio() {
+        try {
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("Resources/Sound/EvilLaugh.wav"));
             backgroundMusic = AudioSystem.getClip();
             backgroundMusic.open(audioInputStream);
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {

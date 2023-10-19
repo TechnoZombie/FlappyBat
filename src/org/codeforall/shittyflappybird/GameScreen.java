@@ -21,7 +21,7 @@ public class GameScreen {
     private int highScore;
 
     public void backgroundImage() {
-        arena = new Picture(10, 10, "resources2/HW-BD.jpeg");
+        arena = new Picture(10, 10, "Resources/Background_GS.jpg");
         arena.draw();
     }
 

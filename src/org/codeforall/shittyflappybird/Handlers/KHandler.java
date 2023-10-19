@@ -2,7 +2,6 @@ package org.codeforall.shittyflappybird.Handlers;
 
 import org.academiadecodigo.simplegraphics.keyboard.*;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
-import org.codeforall.shittyflappybird.Engine;
 import org.codeforall.shittyflappybird.GameObjects.Bat;
 
 import static java.lang.Thread.sleep;
@@ -21,15 +20,36 @@ public class KHandler implements KeyboardHandler, Runnable{
 
     }
 
+    private void holdOn(int milliseconds) {
+        try {
+            sleep(milliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void keyPressed(KeyboardEvent keyboardEvent) {
         switch(keyboardEvent.getKey()){
             case KeyboardEvent.KEY_SPACE:
-                isBeingPulled = false;
-                Bat.batPic.translate(0,-200);
-                Bat.batPic.translate(0,5);
+             // isBeingPulled = false;
+
+                Bat.batPic.translate(0,-50);
+                holdOn(5);
+
+                Bat.batPic.translate(0,-50);
+                holdOn(5);
+
+                Bat.batPic.translate(0,-50);
+                holdOn(5);
+
+                Bat.batPic.translate(0,-50);
+                holdOn(5);
+
+                // Bat.batPic.translate(0,-200);
+               // Bat.batPic.translate(0,5);
                // Bat.movingAnimation();
-                isBeingPulled = true;
+            //   isBeingPulled = true;
                 break;
         }
     }
@@ -45,11 +65,15 @@ public class KHandler implements KeyboardHandler, Runnable{
         while(isBeingPulled){
             Bat.batPic.translate(0, 30); // increase v1 para ter mais gravidade
             try {
-                sleep(80);
+                sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
         }
+    }
+
+    public void setBeingPulled(boolean beingPulled) {
+        isBeingPulled = beingPulled;
     }
 }

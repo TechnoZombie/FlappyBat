@@ -17,9 +17,21 @@ public class Bat extends Picture {
 
     public static Picture batPic;
 
+
+
     public Bat() {
         batPic = new Picture(100, 100, "Resources/animations/BatAnimation/BatAnimation/image (1).png");
 
+        batPic.draw();
+    }
+
+    public void setBatPic() {
+        int lastX = batPic.getX();
+        System.out.println(lastX);
+        int lastY = batPic.getY();
+        System.out.println(lastY);
+        batPic.delete();
+        Bat.batPic = new Picture(lastY,lastX,"Resources/animations/BatAnimation/BatAnimation/DeadBat.png");
         batPic.draw();
     }
 

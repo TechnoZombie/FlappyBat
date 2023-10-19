@@ -22,6 +22,8 @@ import java.util.LinkedList;
 
 public class Engine {
 
+
+
     public static State currentState = State.MENU;
     public static Bat bat;
     GameScreen gameScreen = new GameScreen();
@@ -30,8 +32,9 @@ public class Engine {
     LinkedList<Enemies> list = new LinkedList<>();
 
     public void start() {
-        //t.start(); //REmove comentário para haver som de fundo
-        Picture menu = new Picture(10, 10, "resources2/background.jpeg");
+        //t.start(); //Remove comentário para haver som de fundo
+
+        Picture menu = new Picture(10, 10, "Resources/Background_SS.jpg");
         menu.draw();
         MHandler mHandler = new MHandler();
         mHandler.initMouse();
@@ -74,23 +77,33 @@ public class Engine {
                         gameOver();
                     }
                     if (enemies[i].checkCollision(bat.hitBox())) {
-                        System.out.println("aiaiai meu deus");
+                        //System.out.println("aiaiai meu deus");
                         i = enemies.length - 1;
                         currentState = State.OVER;
                         gameOver();
                     }
                 }
                 enemies[i].newSpawn();
-                System.out.println("bu frances");
+                //System.out.println("bu frances");
             }
         }
     }
         public void gameOver(){
         if (currentState == State.OVER) {
-            gameScreen.removeBackGround();
+
+            //sets bat pic to dead bat and holds the screen for 5 seconds until game over screen
+            bat.setBatPic();
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             removeAll();
             bat.removePicture();
-            new Picture(10,10,"Resources/waterfall.jpg").draw();
+
+            new Picture(10,10,"Resources/Background_ES.jpg").draw();
+            soundHandle.loadEndAudio(); //loads end audio
+
             try {
                 Thread.sleep(10000);
             } catch (InterruptedException e) {

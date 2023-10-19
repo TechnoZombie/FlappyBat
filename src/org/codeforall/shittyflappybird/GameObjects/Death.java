@@ -10,7 +10,7 @@ public class Death extends Enemies {
     Enemies death;
     Picture picture;
     private int x = 1800;
-    private int y = generator(50,1000);
+    private int y = generator(50, 1000);
     private int speed = 40;
 
     public Enemies Death() {
@@ -22,34 +22,34 @@ public class Death extends Enemies {
 
     @Override
     public void move() {
-        if(generator(1,2) == 2) {
+        if (generator(1, 2) == 2) {
             picture.translate(-speed, -15);
         } else {
-            picture.translate(-speed,15);
+            picture.translate(-speed, 15);
         }
         this.x -= speed;
     }
 
     @Override
-    public void removePicture(){
+    public void removePicture() {
         picture.delete();
     }
 
     @Override
     public void drawPicture() {
-        picture = new Picture(x, y, "Resources/placeholder.png");
-        picture.grow(50,50);
+        picture = new Picture(x, y, "Resources/Death.png");
+        picture.grow(20, 20);
         picture.draw();
     }
 
     @Override
     public java.awt.Rectangle hitBox() {
-        return new java.awt.Rectangle(picture.getX(),picture.getY(), picture.getWidth(), picture.getHeight());
+        return new java.awt.Rectangle(picture.getX(), picture.getY(), picture.getWidth(), picture.getHeight());
     }
 
     @Override
-    public boolean checkBounds(){
-        if(picture.getX() > -100){
+    public boolean checkBounds() {
+        if (picture.getX() > -100) {
             return true;
         }
         return false;
@@ -60,8 +60,8 @@ public class Death extends Enemies {
     }
 
     @Override
-    public void newSpawn(){
-        picture.translate(x,y);
+    public void newSpawn() {
+        picture.translate(x, y);
         move();
     }
 
