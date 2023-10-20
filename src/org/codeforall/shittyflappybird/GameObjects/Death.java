@@ -9,8 +9,10 @@ public class Death extends Enemies implements Runnable{
 
     Enemies death;
     Picture picture;
-    private int x = 1800;
-    private int y = generator(50, 850);
+
+    private int x = 1250;
+    private int y = generator(-50, 800);
+
     private int speed = 40;
 
     public Enemies Death() {

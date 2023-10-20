@@ -43,5 +43,6 @@ public class Enemies extends Picture {
         return min + (int) Math.ceil(Math.random() * max);
     }
 }
+// return min + ((int)(Math.random()*(max-min))+min);
 
 

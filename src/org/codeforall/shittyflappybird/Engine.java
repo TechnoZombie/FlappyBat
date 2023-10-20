@@ -33,14 +33,11 @@ public class Engine {
     LinkedList<Enemies> list = new LinkedList<>();
 
     public void start() {
-<<<<<<< Updated upstream
+
         t.start(); //Remove comentário para haver som de fundo
-=======
-       // t.start();//Remove comentário para haver som de fundo
->>>>>>> Stashed changes
 
        // Picture menu = new Picture(10, 10, "Resources/Background_SS.jpg");
-      // t.start(); //REmove comentário para haver som de fundo
+
         Picture menu = new Picture(10, 10, "Resources/start111.png");
         menu.draw();
         MHandler mHandler = new MHandler();
@@ -69,25 +66,34 @@ public class Engine {
             //enemiesFactory.createEnemies();
             enemiesFactory.scheduleEnemiesCreating(10, 2000);
             Enemies[] enemies = enemiesFactory.getArrayEnemies();
+
             /*for (int i = 0; i < enemies.length; i++) {
                 enemies[i].drawPicture();*/
-            while(currentState == State.PLAY){
-                for(int i = 0; i < enemies.length; i++){
-                    if(enemies[i] != null){
-                      //  enemies[i].move();
+            while(currentState == State.PLAY) {
+                for (int i = 0; i < enemies.length; i++) {
+                    if (enemies[i] != null) {
+                        //  enemies[i].move();
                     }
+
+                    // checkAllBounds();//criar em engine ou enemies, wtv
+                    if (bat.checkBorder()) {
+                        removeAll();
+                        currentState = State.OVER;
+                        gameOver();
+                    }
+                    enemies[i].newSpawn();
                 }
-               // checkAllBounds();//criar em engine ou enemies, wtv
-                if(bat.checkBorder()){
-                    removeAll();
-                    currentState = State.OVER;
-                    gameOver();
-                };
                 //if(batAllCollision){
-                   //criar  em engine
-                 //  gameOver();
+                //criar  em engine
+                //  gameOver();
                 //}
                 /*while (enemies[i].checkBounds()) {
+
+            for (int i = 0; i < enemies.length; i++) {
+                enemies[i].drawPicture();
+
+                while (enemies[i].checkBounds()) {
+
                     enemies[i].move();
                     try {
                         Thread.sleep(50);
@@ -101,23 +107,15 @@ public class Engine {
                     if (enemies[i].checkCollision(bat.hitBox())) {
                         i = enemies.length - 1;
                         currentState = State.OVER;
-                        gameOver();
-                    }*/
-                }
-<<<<<<< Updated upstream
-                enemies[i].newSpawn();
-
+                        gameOver();*/
             }
         }
     }
-    public void gameOver(){
-=======
-                //System.out.println("bu frances");
-            }
-        }
+
+
 
     public void gameOver() {
->>>>>>> Stashed changes
+
         if (currentState == State.OVER) {
             soundHandle.runEndMusic(); //runs evil laugh when character dies
 
@@ -131,14 +129,14 @@ public class Engine {
             }*/
             removeAll();
             bat.removePicture();
-<<<<<<< Updated upstream
+
 
             new Picture(10,10,"Resources/Background_ES.jpg").draw();
            // soundHandle.runEndMusic(); //placeholder for endscreen music
-=======
+
            // new Picture(10,10,"Resources/Background_ES.jpg").draw();
             soundHandle.loadEndAudio(); //loads end audio
->>>>>>> Stashed changes
+
 
             new Picture(10, 10, "Resources/gameover.png").draw();
             try {
@@ -177,8 +175,5 @@ public class Engine {
         PLAY,
         OVER;
     }
-
-    ;
-
 
 }

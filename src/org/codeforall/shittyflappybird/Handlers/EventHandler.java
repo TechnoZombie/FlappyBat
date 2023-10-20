@@ -51,14 +51,14 @@ public class EventHandler implements KeyboardHandler, Runnable {
 
     @Override
     public void run() {
-<<<<<<< Updated upstream
+
         loadAudio();
         backgroundMusic.start();
 
         // Stop and close the background music when the game ends
         // backgroundMusic.stop();
         // backgroundMusic.close();
-=======
+
        /* while (true) {
             loadAudio();
             // Play the background music
@@ -72,16 +72,13 @@ public class EventHandler implements KeyboardHandler, Runnable {
         // Stop and close the background music when the game ends
         // backgroundMusic.stop();
         //backgroundMusic.close();
->>>>>>> Stashed changes
-    }
-}
 
-<<<<<<< Updated upstream
+    }
+
     public void runEndMusic(){
         backgroundMusic.stop();
         loadEndAudio();
         endMusic.start();
     }
 }
-=======
->>>>>>> Stashed changes
+

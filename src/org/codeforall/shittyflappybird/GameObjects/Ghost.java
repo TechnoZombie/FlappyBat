@@ -8,8 +8,10 @@ import java.security.interfaces.RSAMultiPrimePrivateCrtKey;
 public class Ghost extends Enemies implements Runnable {
 
     public Enemies ghost;
-    public int x = 1800;
-    public int y = generator(50,850);
+
+    public int x = 1250;
+    public int y = generator(-50, 800);
+
     private int speed = 30;
     Picture picture;
 
