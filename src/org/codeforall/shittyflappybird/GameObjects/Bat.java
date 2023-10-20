@@ -27,9 +27,7 @@ public class Bat extends Picture {
 
     public void setBatPic() {
         int lastX = batPic.getX();
-        System.out.println(lastX);
         int lastY = batPic.getY();
-        System.out.println(lastY);
         batPic.delete();
         Bat.batPic = new Picture(lastY,lastX,"Resources/animations/BatAnimation/DeadBat.png");
         batPic.draw();

@@ -32,7 +32,7 @@ public class Engine {
     LinkedList<Enemies> list = new LinkedList<>();
 
     public void start() {
-        //t.start(); //Remove comentário para haver som de fundo
+        t.start(); //Remove comentário para haver som de fundo
 
         Picture menu = new Picture(10, 10, "Resources/Background_SS.jpg");
         menu.draw();
@@ -77,19 +77,19 @@ public class Engine {
                         gameOver();
                     }
                     if (enemies[i].checkCollision(bat.hitBox())) {
-                        //System.out.println("aiaiai meu deus");
                         i = enemies.length - 1;
                         currentState = State.OVER;
                         gameOver();
                     }
                 }
                 enemies[i].newSpawn();
-                //System.out.println("bu frances");
+
             }
         }
     }
-        public void gameOver(){
+    public void gameOver(){
         if (currentState == State.OVER) {
+            soundHandle.runEndMusic(); //runs evil laugh when character dies
 
             //sets bat pic to dead bat and holds the screen for 5 seconds until game over screen
             bat.setBatPic();
@@ -102,7 +102,7 @@ public class Engine {
             bat.removePicture();
 
             new Picture(10,10,"Resources/Background_ES.jpg").draw();
-            soundHandle.loadEndAudio(); //loads end audio
+           // soundHandle.runEndMusic(); //placeholder for endscreen music
 
             try {
                 Thread.sleep(10000);
