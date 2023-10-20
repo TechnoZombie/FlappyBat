@@ -11,7 +11,7 @@ public class Enemies extends Picture {
     Death d;
     Ghost g;
 
-    public void move() {
+    public void move() throws InterruptedException {
         translate(-20, 0);
     }
 

@@ -5,12 +5,12 @@ import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 import java.awt.*;
 
-public class Death extends Enemies {
+public class Death extends Enemies implements Runnable{
 
     Enemies death;
     Picture picture;
     private int x = 1800;
-    private int y = generator(50, 1000);
+    private int y = generator(50, 850);
     private int speed = 40;
 
     public Enemies Death() {
@@ -21,13 +21,25 @@ public class Death extends Enemies {
     }
 
     @Override
-    public void move() {
-        if (generator(1, 2) == 2) {
-            picture.translate(-speed, -15);
-        } else {
-            picture.translate(-speed, 15);
+    public void run(){
+        try {
+            move();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
-        this.x -= speed;
+    }
+
+    @Override
+    public void move() throws InterruptedException {
+        while(true) {
+            if (generator(1, 2) == 2) {
+                picture.translate(-speed, -15);
+            } else {
+                picture.translate(-speed, 15);
+            }
+            Thread.sleep(50);
+            this.x -= speed;
+        }
     }
 
     @Override
@@ -62,7 +74,7 @@ public class Death extends Enemies {
     @Override
     public void newSpawn() {
         picture.translate(x, y);
-        move();
+       // move();
     }
 
     @Override

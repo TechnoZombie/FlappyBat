@@ -22,6 +22,7 @@ public class GameScreen {
 
     public void backgroundImage() {
         arena = new Picture(10, 10, "Resources/Background_GS.jpg");
+        arena = new Picture(10, 10, "Resources/backfinal.png");
         arena.draw();
     }
 

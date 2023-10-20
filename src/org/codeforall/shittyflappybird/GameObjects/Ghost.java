@@ -5,11 +5,11 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 import java.awt.*;
 import java.security.interfaces.RSAMultiPrimePrivateCrtKey;
 
-public class Ghost extends Enemies {
+public class Ghost extends Enemies implements Runnable {
 
     public Enemies ghost;
     public int x = 1800;
-    public int y = generator(50, 1000);
+    public int y = generator(50,850);
     private int speed = 30;
     Picture picture;
 
@@ -20,14 +20,27 @@ public class Ghost extends Enemies {
         return ghost;
     }
 
+   @Override
+   public void run(){
+       try {
+           move();
+       } catch (InterruptedException e) {
+           throw new RuntimeException(e);
+       }
+   }
+
     @Override
-    public void move() {
-        if (generator(1, 2) == 2) {
-            picture.translate(-speed, -15);
-        } else {
-            picture.translate(-speed, 15);
+    public void move() throws InterruptedException {
+        while(true) {
+            if (generator(1, 2) == 2) {
+                picture.translate(-speed, -15);
+                Thread.sleep(50);
+            } else {
+                picture.translate(-speed, 15);
+                Thread.sleep(50);
+            }
+            this.x -= speed;
         }
-        this.x -= speed;
     }
 
     @Override
@@ -46,7 +59,7 @@ public class Ghost extends Enemies {
     @Override
     public void newSpawn(){
         picture.translate(x,y);
-        move();
+        //move();
     }
 
     @Override
