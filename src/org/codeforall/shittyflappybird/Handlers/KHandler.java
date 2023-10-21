@@ -63,8 +63,7 @@ public class KHandler implements KeyboardHandler, Runnable{
     public void run() {
         initKey();
         while(Bat.batPic.getY() < 820){
-            System.out.println(Bat.batPic.getY());
-            Bat.batPic.translate(0, 30); // increase v1 para ter mais gravidade
+           Bat.batPic.translate(0, 30); // increase v1 para ter mais gravidade
             try {
                 sleep(50);
             } catch (InterruptedException e) {

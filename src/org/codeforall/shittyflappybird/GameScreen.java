@@ -44,17 +44,15 @@ public class GameScreen {
         scoreName.grow(60, 30);
         scoreName.draw();
 
-
-        // this is creating and initializing the score text number
         scoreText = new Text(650, 95, String.valueOf(score));
         scoreText.setColor(Color.ORANGE);
         scoreText.grow(60, 60);
         scoreText.draw();
 
-        scoreName = new Text(620, 160, "SECONDS");
-        scoreName.setColor(Color.ORANGE);
-        scoreName.grow(60, 30);
-        scoreName.draw();
+        scoreName2 = new Text(620, 160, "SECONDS");
+        scoreName2.setColor(Color.ORANGE);
+        scoreName2.grow(60, 30);
+        scoreName2.draw();
 
         // this is a task to update the score every 5 seconds
         Timer timer = new Timer();

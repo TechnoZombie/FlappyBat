@@ -20,8 +20,7 @@ public class MHandler implements MouseHandler, Runnable{
 
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
-        if(Engine.currentState == Engine.State.MENU){
-            System.out.println("oi");
+        if (Engine.currentState == Engine.State.MENU) {
             Engine.currentState = Engine.State.PLAY;
         }
 
