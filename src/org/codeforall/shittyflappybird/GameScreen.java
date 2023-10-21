@@ -19,6 +19,7 @@ public class GameScreen {
     private Picture arena;
     private Text scoreText;
     private Text scoreName;
+    private Text scoreName2;
 
 
     private int score;
@@ -38,21 +39,26 @@ public class GameScreen {
         grid.draw();
 
         // this is creating and initializing the score text
-        scoreName = new Text(1175, 25, "Wave:");
-        scoreName.setColor(Color.WHITE);
-        scoreName.grow(5,5);
+        scoreName = new Text(590, 40, "AVOIDED DEATH FOR");
+        scoreName.setColor(Color.ORANGE);
+        scoreName.grow(60, 30);
         scoreName.draw();
 
 
         // this is creating and initializing the score text number
-        scoreText = new Text(1200, 45, String.valueOf(score));
-        scoreText.setColor(Color.WHITE);
-        scoreText.grow(3,3);
+        scoreText = new Text(650, 95, String.valueOf(score));
+        scoreText.setColor(Color.ORANGE);
+        scoreText.grow(60, 60);
         scoreText.draw();
+
+        scoreName = new Text(620, 160, "SECONDS");
+        scoreName.setColor(Color.ORANGE);
+        scoreName.grow(60, 30);
+        scoreName.draw();
 
         // this is a task to update the score every 5 seconds
         Timer timer = new Timer();
-        timer.schedule(new UpdateScoreTask(), 5000, 5000);
+        timer.schedule(new UpdateScoreTask(), 2000, 1000);
     }
 
     public void removeBackGround(){
