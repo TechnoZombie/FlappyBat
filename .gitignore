@@ -4,7 +4,6 @@ out/
 !**/src/test/**/out/
 TOWNHALL/
 FlappyBat.iml
-Resources/
 build/
 
 
