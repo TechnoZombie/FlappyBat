@@ -4,6 +4,9 @@ out/
 !**/src/test/**/out/
 TOWNHALL/
 FlappyBat.iml
+Resources/
+build/
+
 
 ### Eclipse ###
 .apt_generated
