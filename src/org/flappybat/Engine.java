@@ -7,16 +7,16 @@
 	-- org.codeforall.shittyflappybird.Gravity; [y will always --; keyboard will y++]
  */
 
-package org.codeforall.flappybat;
+package org.flappybat;
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
-import org.codeforall.flappybat.GameObjects.Bat;
-import org.codeforall.flappybat.Handlers.KHandler;
-import org.codeforall.flappybat.Handlers.MHandler;
-import org.codeforall.flappybat.Handlers.SoundHandler;
-import org.codeforall.flappybat.GameObjects.Enemies;
-import org.codeforall.flappybat.GameObjects.EnemiesFactory;
+import org.flappybat.GameObjects.Bat;
+import org.flappybat.Handlers.KHandler;
+import org.flappybat.Handlers.MHandler;
+import org.flappybat.Handlers.SoundHandler;
+import org.flappybat.GameObjects.Enemies;
+import org.flappybat.GameObjects.EnemiesFactory;
 
 
 import java.util.LinkedList;
@@ -28,14 +28,14 @@ public class Engine {
     GameScreen gameScreen = new GameScreen();
     LinkedList<Enemies> list = new LinkedList<>();
     Rectangle border = new Rectangle(1200, 10, 200, 2000);
-    public org.codeforall.flappybat.Handlers.SoundHandler soundHandler = new org.codeforall.flappybat.Handlers.SoundHandler("/Resources/Sound/FreakShort.wav");
+    public SoundHandler soundHandler = new SoundHandler("/Resources/Sound/FreakShort.wav");
 
 
     public void start() {
         soundHandler.play();
         Picture menu = new Picture(10, 10, "Resources/start111.png");
         menu.draw();
-        org.codeforall.flappybat.Handlers.MHandler mHandler = new MHandler();
+        MHandler mHandler = new MHandler();
         mHandler.initMouse();
         while (currentState == State.MENU) {
             try {
@@ -53,11 +53,11 @@ public class Engine {
         while (currentState == State.PLAY) {
             gameScreen.backgroundImage();
             gameScreen.gridmaker();
-            new org.codeforall.flappybat.GameObjects.Bat();
-            org.codeforall.flappybat.Gravity gravity = new Gravity();
+            new Bat();
+            Gravity gravity = new Gravity();
             Thread tt = new Thread(gravity);
             tt.start();
-            org.codeforall.flappybat.Handlers.KHandler kHandler = new KHandler();
+            KHandler kHandler = new KHandler();
             kHandler.initKey();
             EnemiesFactory enemiesFactory = new EnemiesFactory();
             enemiesFactory.setEnemyNumber(100);
@@ -72,12 +72,12 @@ public class Engine {
                 while (!enemy.checkBounds()) {
                     enemy.tryMove();
                     if (enemy.checkIntersection()) {
-                        org.codeforall.flappybat.GameObjects.Bat.isDead = true;
+                        Bat.isDead = true;
                         gameOver();
                         break;
                     }
-                    if (org.codeforall.flappybat.GameObjects.Bat.batPic.getY() > 980) {
-                        org.codeforall.flappybat.GameObjects.Bat.isDead = true;
+                    if (Bat.batPic.getY() > 980) {
+                        Bat.isDead = true;
                         gameOver();
                         break;
                     }
@@ -91,11 +91,11 @@ public class Engine {
 
     public void gameOver() {
         currentState = State.OVER;
-        org.codeforall.flappybat.GameObjects.Bat.batDeathAnimation();
+        Bat.batDeathAnimation();
         removeAll();
         Bat.removePicture();
         soundHandler.close();
-        org.codeforall.flappybat.Handlers.SoundHandler soundHandler1 = new SoundHandler("/Resources/Sound/EvilLaugh.wav");
+        SoundHandler soundHandler1 = new SoundHandler("/Resources/Sound/EvilLaugh.wav");
         soundHandler1.play();
         Picture gameOver = new Picture(10, 10, "Resources/gameover.png");
         gameOver.draw();

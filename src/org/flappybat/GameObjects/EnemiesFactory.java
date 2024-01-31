@@ -1,10 +1,4 @@
-package org.codeforall.flappybat.GameObjects;
-
-import java.util.HashMap;
-import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
-
+package org.flappybat.GameObjects;
 
 
 public class EnemiesFactory {

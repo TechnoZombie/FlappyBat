@@ -1,19 +1,19 @@
-package org.codeforall.flappybat.GameObjects;
+package org.flappybat.GameObjects;
 
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 import java.awt.*;
 
-public class Death extends Enemies {
+public class Ghost extends Enemies {
 
     Picture picture;
-    private int x = 1100;
-    private int y = generator(150, 500);
+    public int x = 1100;
+    public int y = generator(150, 500);
     private int speed = 5;
     public boolean killedBat = false;
 
-    public Death Death() {
-        return new Death();
+    public Enemies Ghost() {
+        return new Ghost();
     }
 
     @Override
@@ -33,10 +33,9 @@ public class Death extends Enemies {
     @Override
     public void move() throws InterruptedException {
         if (checkBounds()) {
-            picture.delete();
-            delete();
+            removePicture();
         }else if (checkIntersection()) {
-            picture.delete();
+            removePicture();
             killedBat = true;
         }
         if (generator(1, 2) == 2) {
@@ -46,7 +45,7 @@ public class Death extends Enemies {
         }
         Thread.sleep(50);
         this.x -= speed;
-        speed += 3;
+        speed += 2;
     }
 
     @Override
@@ -56,14 +55,14 @@ public class Death extends Enemies {
 
     @Override
     public void drawPicture() {
-        picture = new Picture(x, y, "Resources/Death.png");
-        picture.grow(10, 10);
+        picture = new Picture(x, y, "Resources/ghost.gif");
+        picture.grow(30, 30);
         picture.draw();
     }
 
     @Override
     public java.awt.Rectangle hitBox() {
-        return new java.awt.Rectangle(picture.getX(), picture.getY(), picture.getWidth(), picture.getHeight());
+        return new Rectangle(picture.getX(), picture.getY(), picture.getWidth(), picture.getHeight());
     }
 
     @Override

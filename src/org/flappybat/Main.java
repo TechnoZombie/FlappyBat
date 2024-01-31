@@ -1,8 +1,4 @@
-/*
-    g.start()
-*/
-
-package org.codeforall.flappybat;
+package org.flappybat;
 
 public class Main {
 

@@ -1,10 +1,10 @@
-package org.codeforall.flappybat.Handlers;
+package org.flappybat.Handlers;
 
 import org.academiadecodigo.simplegraphics.mouse.Mouse;
 import org.academiadecodigo.simplegraphics.mouse.MouseEvent;
 import org.academiadecodigo.simplegraphics.mouse.MouseHandler;
 import org.academiadecodigo.simplegraphics.mouse.MouseEventType;
-import org.codeforall.flappybat.Engine;
+import org.flappybat.Engine;
 
 public class MHandler implements MouseHandler, Runnable{
 

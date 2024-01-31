@@ -5,7 +5,7 @@
 	-- Lives; (v2)
  */
 
-package org.codeforall.flappybat.GameObjects;
+package org.flappybat.GameObjects;
 
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 

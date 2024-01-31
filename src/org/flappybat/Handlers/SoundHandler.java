@@ -1,4 +1,4 @@
-package org.codeforall.flappybat.Handlers;
+package org.flappybat.Handlers;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
