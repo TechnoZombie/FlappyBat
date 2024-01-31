@@ -1,4 +1,4 @@
-package org.codeforall.shittyflappybird.Handlers;
+package org.codeforall.flappybat.Handlers;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;

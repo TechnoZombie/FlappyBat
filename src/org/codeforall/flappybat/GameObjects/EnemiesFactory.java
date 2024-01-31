@@ -1,6 +1,4 @@
-package org.codeforall.shittyflappybird.GameObjects;
-
-import org.academiadecodigo.simplegraphics.pictures.Picture;
+package org.codeforall.flappybat.GameObjects;
 
 import java.util.HashMap;
 import java.util.Random;

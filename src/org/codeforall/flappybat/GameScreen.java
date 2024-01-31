@@ -6,13 +6,13 @@
     --show current lives; (v2)
  */
 
-package org.codeforall.shittyflappybird;
+package org.codeforall.flappybat;
 
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
-import org.codeforall.shittyflappybird.GameObjects.Bat;
+import org.codeforall.flappybat.GameObjects.Bat;
 
 import java.util.Timer;
 import java.util.TimerTask;

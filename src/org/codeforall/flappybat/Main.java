@@ -2,7 +2,7 @@
     g.start()
 */
 
-package org.codeforall.shittyflappybird;
+package org.codeforall.flappybat;
 
 public class Main {
 

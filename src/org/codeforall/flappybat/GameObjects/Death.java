@@ -1,4 +1,4 @@
-package org.codeforall.shittyflappybird.GameObjects;
+package org.codeforall.flappybat.GameObjects;
 
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 

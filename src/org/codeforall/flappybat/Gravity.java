@@ -1,6 +1,6 @@
-package org.codeforall.shittyflappybird;
+package org.codeforall.flappybat;
 
-import org.codeforall.shittyflappybird.GameObjects.Bat;
+import org.codeforall.flappybat.GameObjects.Bat;
 
 public class Gravity implements Runnable{
     @Override

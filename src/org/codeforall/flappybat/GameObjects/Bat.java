@@ -5,10 +5,9 @@
 	-- Lives; (v2)
  */
 
-package org.codeforall.shittyflappybird.GameObjects;
+package org.codeforall.flappybat.GameObjects;
 
 import org.academiadecodigo.simplegraphics.pictures.Picture;
-import org.codeforall.shittyflappybird.GameScreen;
 
 import java.awt.*;
 //import java.awt.*;

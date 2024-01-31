@@ -1,8 +1,8 @@
-package org.codeforall.shittyflappybird.Handlers;
+package org.codeforall.flappybat.Handlers;
 
 import org.academiadecodigo.simplegraphics.keyboard.*;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
-import org.codeforall.shittyflappybird.GameObjects.Bat;
+import org.codeforall.flappybat.GameObjects.Bat;
 
 import static java.lang.Thread.sleep;
 
@@ -29,27 +29,27 @@ public class KHandler implements KeyboardHandler, Runnable{
         switch(keyboardEvent.getKey()){
             case KeyboardEvent.KEY_SPACE:
              // isBeingPulled = false;
-                if(Bat.isDead){
+                if(org.codeforall.flappybat.GameObjects.Bat.isDead){
                     break;
                 }
-                if(Bat.batPic.getY() < 150){
+                if(org.codeforall.flappybat.GameObjects.Bat.batPic.getY() < 150){
                     break;
                 }
-                Bat.batPic.translate(0,-50);
+                org.codeforall.flappybat.GameObjects.Bat.batPic.translate(0,-50);
                 try {
                     holdOn(5);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
 
-                Bat.batPic.translate(0,-50);
+                org.codeforall.flappybat.GameObjects.Bat.batPic.translate(0,-50);
                 try {
                     holdOn(5);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
 
-                Bat.batPic.translate(0,-50);
+                org.codeforall.flappybat.GameObjects.Bat.batPic.translate(0,-50);
                 try {
                     holdOn(5);
                 } catch (InterruptedException e) {
